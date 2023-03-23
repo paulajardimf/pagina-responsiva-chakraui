@@ -20,30 +20,38 @@ import {
 export default function Home() {
   return (
     <Flex
-      minH={"100vh"}
+      w={"100vw"}
+      h={["auto", "100vh"]}
       align={"center"}
-      justify={"start"}
+      justify={"center"}
       bg={useColorModeValue("gray.50", "gray.800")}
     >
-      <HStack spacing={8} mx={"auto"} maxW={"800px"} py={12} px={6}>
-        <VStack align={"start"}>
-          <Heading fontSize={"4xl"} fontWeight={"bold"} textAlign={"center"}>
+      <Flex spacing={0} mx={"auto"} w={["375px", "1216px"]} py={0} px={0} gap={"2rem"}>
+        <Flex flexDirection={"column"} spacing={0} mx={"auto"} py={0} px={0}>
+          <Heading
+            alignSelf={"flex-start"}
+            fontSize={"2.25rem"}
+            fontWeight={"bold"}
+          >
             Let's Connect
           </Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue
-            ex, iaculis non magna sit amet, posuere fermentum magna. Praesent
-            tempus risus mauris, ac pharetra mi sagittis id.
+          <Text
+            fontSize={"1.25rem"}
+            color={"gray.600"}
+            letterSpacing={"0.03rem"}
+            my={"2rem"}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue ex, iaculis non magna sit amet, posuere fermentum magna. Praesent tempus risus mauris, ac pharetra mi sagittis id.
           </Text>
-
           <Box
             rounded={"lg"}
             bg={useColorModeValue("white", "gray.900")}
             boxShadow={"lg"}
-            p={30}
+            p={"2rem"}
+            w={"800px"}
           >
-            <Stack spacing={4}>
-              <HStack w="100%">
+            <Flex flexDirection={"column"} gap={"2rem"} w={"100%"}>
+              <Flex gap={"2rem"}>
                 <Box flex={1}>
                   <FormControl id="name">
                     <FormLabel>Name</FormLabel>
@@ -56,8 +64,8 @@ export default function Home() {
                     <Input type="text" />
                   </FormControl>
                 </Box>
-              </HStack>
-              <HStack>
+              </Flex>
+              <Flex gap={"2rem"}>
                 <Box flex={1}>
                   <FormControl id="email">
                     <FormLabel>Email</FormLabel>
@@ -70,57 +78,62 @@ export default function Home() {
                     <Input type="phone" />
                   </FormControl>
                 </Box>
-              </HStack>
+              </Flex>
               <FormControl id="subject">
                 <FormLabel>Subject</FormLabel>
                 <Input type="text" />
               </FormControl>
-              <FormControl id="password" isRequired>
+              <FormControl id="password">
                 <FormLabel>Your Message</FormLabel>
                 <InputGroup>
                   <Textarea />
                 </InputGroup>
               </FormControl>
-              <Stack spacing={10} pt={2}>
-                <Button
-                  loadingText="Submitting"
-                  size="lg"
-                  bg={"red.400"}
-                  color={"white"}
-                  _hover={{
-                    bg: "red.500",
-                  }}
-                >
-                  Sign up
-                </Button>
-              </Stack>
-            </Stack>
+              <Button
+                loadingText="Submitting"
+                size="lg"
+                w={"110px"}
+                bg={"red.400"}
+                color={"white"}
+                _hover={{
+                  bg: "red.500",
+                }}
+              >
+                Submit
+              </Button>
+            </Flex>
           </Box>
-        </VStack>
-        <VStack h={"100%"} align={"flex-start"} spacing={8} >
-          <Heading fontSize={"1xl"} fontWeight={"bold"}>
+        </Flex>
+        <Flex
+          flexDirection={"column"}
+          h={"100%"}
+          w={"100%"}
+          align={"flex-start"}
+          justify={"center"}
+        >
+          <Heading fontSize={"1xl"} fontWeight={"bold"} mt={"4.5rem"} mb={"0.75rem"}>
             Our Commitment
           </Heading>
           <Box
             rounded={"lg"}
             bg={useColorModeValue("white", "gray.900")}
             boxShadow={"lg"}
-            p={30}
+            p={"1.75rem"}
           >
-            <Text fontSize={"lg"} color={"gray.600"}>
+            <Text fontSize={"1.125rem"} color={"gray.600"}>
               Orci varius natoque penatibus et magnis disparturient montes,
               nascetur ridiculus mus. Vivamus hendrerit justo eu diam varius
               dictum
             </Text>
           </Box>
-          <Heading fontSize={"1xl"} fontWeight={"bold"}>
+          <Heading fontSize={"1xl"} fontWeight={"bold"} mt={"4rem"} mb={"0.75rem"}>
             Art Directing
           </Heading>
           <Box
             rounded={"lg"}
             bg={useColorModeValue("white", "gray.900")}
             boxShadow={"lg"}
-            p={30}
+            p={"1.75rem"}
           >
             <Text fontSize={"lg"} color={"gray.600"}>
               Proin sapien ligula, aliquam eget enim ac, fringilla hendrerit
@@ -144,8 +157,8 @@ export default function Home() {
               120 Street Lorem Ipsum Sit Amet
             </Text>
           </Box>
-        </VStack>
-      </HStack>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }
