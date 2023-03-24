@@ -2,7 +2,7 @@
 
 ![Badge Finalizado](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
 
-Projeto desenvolvido para o teste da vaga de estágio em Desenvolvimento Front End na empresa Ecto.
+Projeto desenvolvido para o teste da vaga de estágio em Desenvolvimento Front End na empresa Ecto Digital.
 O desafio foi fazer uma página responsiva conforme layout do figma disponibilizado.
 
 # Índice
