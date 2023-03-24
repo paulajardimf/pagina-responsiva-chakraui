@@ -21,23 +21,18 @@ export default function Home() {
   return (
     <Flex
       w={"100vw"}
-      h={["auto", "100vh"]}
-      align={"center"}
+      h={["auto", "auto", "auto", "100vh"]}
+      align={["center", "center", "center", "auto", "auto"]}
       justify={"center"}
       bg={useColorModeValue("gray.50", "gray.800")}
     >
       <Flex
-        mx={"auto"}
-        w={["23.5rem", "76rem"]}
+        mx={["auto", "4rem", "auto"]}
+        w={["23.5rem", "50rem", "76rem"]}
         gap={"2rem"}
-        flexDirection={["column", "row"]}
+        flexDirection={["column", "column", "row", "row"]}
       >
-        <Flex
-          flexDirection={"column"}
-          spacing={0}
-          mx={"auto"}
-          align={["center", "auto"]}
-        >
+        <Flex flexDirection={"column"} mx={"auto"} align={["auto"]}>
           {!isMobileScreen && (
             <Heading
               alignSelf={"flex-start"}
@@ -64,7 +59,7 @@ export default function Home() {
             bg={useColorModeValue("white", "gray.900")}
             boxShadow={"lg"}
             p={"2rem"}
-            w={["327px", "800px"]}
+            maxW={["327px", "550px", "600px", "800px"]}
             mt={["1.5rem", "0"]}
           >
             {isMobileScreen && (
@@ -164,7 +159,7 @@ export default function Home() {
               rounded={"lg"}
               bg={useColorModeValue("white", "gray.900")}
               boxShadow={"lg"}
-              w={["327px", "auto"]}
+              maxW={["327px", "550px", "600px", "auto"]}
               p={"1.75rem"}
             >
               {!isMobileScreen && (
@@ -197,7 +192,7 @@ export default function Home() {
             <Box
               rounded={"lg"}
               bg={useColorModeValue("white", "gray.900")}
-              w={["327px", "auto"]}
+              maxW={["327px", "550px", "600px", "auto"]}
               boxShadow={"lg"}
               p={"1.75rem"}
               mb={"1.5rem"}
@@ -211,7 +206,8 @@ export default function Home() {
                 )}
                 {isMobileScreen && (
                   <Text fontSize={"lg"} color={"gray.500"}>
-                    Interested in working together? Suspendisse potenti. Mauris mollis diam tempus ut.
+                    Interested in working together? Suspendisse potenti. Mauris
+                    mollis diam tempus ut.
                   </Text>
                 )}
                 <Text
